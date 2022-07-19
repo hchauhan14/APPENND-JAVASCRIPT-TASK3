@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task</title>
+    <style>
+        .block {
+            border: 5px solid rgb(179, 126, 28);
+            margin: 5px;
+            padding: 2px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="count"></div>
+        <div id="countblocks"></div>
+        <div id="button"><button onclick="incCount()">Count!</button></div>
+    </div>
+    <script>
+        var ct = 0;
+
+        function incCount(){
+            ct++;
+
+            var tcount = document.getElementById("count");
+            tcount.innerHTML= "The No.Total Count is: " + ct;
+
+            var divtag = document.createElement("div");
+            divtag.innerHTML = "Count " + ct;
+            divtag.classList.add("block")
+        
+            var bcount = document.getElementById("countblocks");
+            bcount.append(divtag);
+
+            return ct;
+        }
+//         incCount();
+
+// setInterval(incCount, 1000);
+    </script>
+</body>
+</html>
